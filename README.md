@@ -1,34 +1,19 @@
-# Cevher Dogan – Personal Portfolio
 
-A modern, responsive personal site built with React, Tailwind CSS, and Next.js. Inspired by Arda Gunsuren’s clean portfolio style.
+# Cevher Dogan – Portfolio (Enhanced)
 
-## 🚀 Live Demo
-_coming soon_ (hosted on Vercel)
+This is a React + Tailwind + Framer Motion portfolio site, styled and ready for production.
 
-## 💼 Highlights
-- Resume: [/resume.pdf](./public/resume.pdf)
-- Cover Letter: [/cover-letter.pdf](./public/cover-letter.pdf)
+## Features
 
-## 🔧 Tech Stack
-- React + Next.js
-- Tailwind CSS
-- Deployed via Vercel
+- Responsive design with dark/light mode toggle
+- Animated transitions using Framer Motion
+- Contact form with spam protection
+- SEO tags and favicon
+- Ready to deploy on Vercel
 
-## 🧠 Features
-- Light/Dark mode support
-- Responsive layout
-- Custom resume/contact/project sections
-- MIT licensed
+## Setup
 
-## 📫 Contact
-- Email: cevherd@gmail.com
-- LinkedIn: https://www.linkedin.com/in/cevherdogan/
-- Calendly: https://calendly.com/cevherdogan/30min
-
----
-
-© 2025 Cevher Dogan · MIT License
-
----
-
-🛠️ Developer Notes → [README_DEV_NOTES.md](./README_DEV_NOTES.md)
+```bash
+npm install
+npm run dev
+```

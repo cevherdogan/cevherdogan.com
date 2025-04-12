@@ -41,6 +41,14 @@ This will launch the site at `http://localhost:3000`.
 
 ---
 
+## Add a domain
+
+```bash
+open https://vercel.com/cevhers-projects/cevherdogan-com/settings/domains
+```
+
+---
+
 ## 🌐 Deployment Notes
 
 - Ideal for Vercel with GitHub integration
