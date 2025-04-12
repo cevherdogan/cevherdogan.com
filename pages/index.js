@@ -37,7 +37,7 @@ export default function Home() {
 
         <section className="flex flex-col items-center justify-center text-center px-6 py-24">
           <img
-            src="https://media.licdn.com/dms/image/C4D03AQFuQDL79zIj-Q/profile-displayphoto-shrink_400_400/0/1516174295676?e=1718236800&v=beta&t=4ckbS-TmfGqzRxFq8IpYxQz0XYPVxSbe1GZ19GzT9tE"
+            src="/profile.jpg"
             alt="Cevher Dogan"
             className="rounded-full w-36 h-36 mb-6 shadow-lg border-2 border-gray-300 dark:border-gray-700"
           />
@@ -96,9 +96,9 @@ export default function Home() {
         <section className="max-w-4xl mx-auto px-4 py-16">
           <h2 className="text-3xl font-bold mb-6">Contact</h2>
           <form action="https://formspree.io/f/xnqkzaye" method="POST" className="space-y-4">
-            <input type="text" name="name" placeholder="Your Name" required className="w-full px-4 py-2 border rounded" />
-            <input type="email" name="email" placeholder="Your Email" required className="w-full px-4 py-2 border rounded" />
-            <textarea name="message" rows="5" placeholder="Your Message" required className="w-full px-4 py-2 border rounded"></textarea>
+            <input type="text" name="name" placeholder="Your Name" required className="w-full px-4 py-2 border rounded text-gray-900" />
+            <input type="email" name="email" placeholder="Your Email" required className="w-full px-4 py-2 border rounded text-gray-900" />
+            <textarea name="message" rows="5" placeholder="Your Message" required className="w-full px-4 py-2 border rounded text-gray-900"></textarea>
             <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded">Send Message</button>
           </form>
 
@@ -120,4 +120,5 @@ Cloud Platform Engineer | Automation Strategist
     </>
   );
 }
+
 
