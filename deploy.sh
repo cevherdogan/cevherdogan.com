@@ -5,20 +5,26 @@ set -e
 echo "🔄 Starting deployment..."
 
 # Optional: Run npm install if needed
-read -p "🧩 Run npm install? (y/n) " install_choice
-if [[ "$install_choice" == "y" ]]; then
+read -r -p "🧩 Run npm install? (y/N) " install_choice
+install_choice=${install_choice:-N}
+if [[ "$install_choice" == [Yy] ]]; then
   echo "📦 Installing dependencies..."
   npm install
+else
+  echo "📦 Skipping npm install"
 fi
 
 # Optional: Run formatter
-read -p "🎨 Run prettier or eslint before build? (p/e/skip) " lint_choice
+read -r -p "🎨 Run prettier or eslint before build? (p/e/S) " lint_choice
+lint_choice=${lint_choice:-S}
 if [[ "$lint_choice" == "p" ]]; then
   echo "🎯 Running prettier..."
   npx prettier --write .
 elif [[ "$lint_choice" == "e" ]]; then
   echo "🔍 Running eslint..."
   npx eslint . --fix
+else
+  echo "🎨 Skipping code formatting"
 fi
 
 # Step 1: Build

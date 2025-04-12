@@ -1,0 +1,61 @@
+#!/bin/bash
+
+set -e
+
+echo "🔄 Starting deployment..."
+
+# Defaults
+RUN_INSTALL=false
+RUN_LINT=false
+
+# Parse command-line arguments
+for arg in "$@"; do
+  case $arg in
+    --install)
+      RUN_INSTALL=true
+      ;;
+    --lint)
+      RUN_LINT=true
+      ;;
+  esac
+done
+
+# Step 1: Install (if requested)
+if [ "$RUN_INSTALL" = true ]; then
+  echo "📦 Installing dependencies..."
+  npm install
+else
+  echo "🟡 Skipping npm install"
+fi
+
+# Step 2: Lint (if requested)
+if [ "$RUN_LINT" = true ]; then
+  echo "🎨 Running Prettier..."
+  npx prettier --write .
+else
+  echo "🟡 Skipping linting"
+fi
+
+# Step 3: Build
+echo "🛠️ Building the project..."
+npm run build
+
+# Step 4: Vercel auth
+if ! vercel whoami &> /dev/null; then
+  echo "🔑 Not logged into Vercel. Logging in..."
+  vercel login
+else
+  echo "✅ Vercel user: $(vercel whoami)"
+fi
+
+# Step 5: Deploy
+echo "🚀 Deploying to Vercel (Production)..."
+LIVE_URL=$(vercel --prod --confirm)
+
+# Step 6: Open URL
+echo "🌐 Opening site..."
+open "$LIVE_URL" || xdg-open "$LIVE_URL"
+
+echo "✅ Done: $LIVE_URL"
+
+
