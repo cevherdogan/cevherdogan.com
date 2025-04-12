@@ -54,12 +54,6 @@ export default function Home() {
         <h2 className="text-3xl font-bold mb-6">Featured Projects</h2>
         <ul className="space-y-4">
           <li>
-            <strong>PepCubes</strong> – Healthy snack venture with a focus on automation and Shopify integrations. <a className="underline" href="https://pepcubes.com" target="_blank">Visit site</a>
-          </li>
-          <li>
-            <strong>SafeGPT</strong> – A GPT testing framework that detects personal data leakage before going live.
-          </li>
-          <li>
             <strong>ClaimGuard</strong> – An automation suite for ethical use cases in state benefit systems.
           </li>
           <li>
