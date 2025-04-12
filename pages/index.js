@@ -95,10 +95,12 @@ export default function Home() {
 
         <section className="max-w-4xl mx-auto px-4 py-16">
           <h2 className="text-3xl font-bold mb-6">Contact</h2>
-          <form action="https://formspree.io/f/xnqkzaye" method="POST" className="space-y-4">
+            <form action="https://formspree.io/f/xvgklkpq" method="POST" className="space-y-4">
             <input type="text" name="name" placeholder="Your Name" required className="w-full px-4 py-2 border rounded text-gray-900" />
             <input type="email" name="email" placeholder="Your Email" required className="w-full px-4 py-2 border rounded text-gray-900" />
             <textarea name="message" rows="5" placeholder="Your Message" required className="w-full px-4 py-2 border rounded text-gray-900"></textarea>
+            <input type="hidden" name="_subject" value="New message from portfolio" />
+            <input type="hidden" name="_next" value="https://cevherdogan-com.vercel.app/?success=true" />
             <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded">Send Message</button>
           </form>
 
