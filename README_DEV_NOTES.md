@@ -7,6 +7,7 @@ This file provides context for developers who may be running, modifying, or depl
 ## 📦 Dependency Management
 
 ### ✅ Check In `package-lock.json`
+
 - Ensures **consistent dependency resolution** across machines.
 - Required for **reliable Vercel and CI/CD builds**.
 - Speeds up `npm install` by avoiding version re-resolution.
@@ -22,11 +23,11 @@ This file provides context for developers who may be running, modifying, or depl
 
 ## 🔌 Optional Dependencies to Add
 
-| Feature            | Suggestion               |
-|--------------------|--------------------------|
-| Animations         | `framer-motion`          |
-| Fonts              | `@next/font` or Google Fonts |
-| SEO customization  | `next-seo` (optional)    |
+| Feature           | Suggestion                   |
+| ----------------- | ---------------------------- |
+| Animations        | `framer-motion`              |
+| Fonts             | `@next/font` or Google Fonts |
+| SEO customization | `next-seo` (optional)        |
 
 ---
 

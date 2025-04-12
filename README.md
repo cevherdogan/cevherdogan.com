@@ -1,4 +1,3 @@
-
 # Cevher Dogan – Portfolio (Enhanced)
 
 This is a React + Tailwind + Framer Motion portfolio site, styled and ready for production.
