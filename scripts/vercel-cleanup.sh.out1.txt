@@ -1,0 +1,142 @@
+cloudruple:scripts cevherdogan$ ./vercel-cleanup.sh
+
+Usage: ./vercel-cleanup.sh [command]
+
+Commands:
+  list                  List all deployments (default scope)
+  list-teams            Show available team scopes
+  delete-all            Remove all deployments (Preview + Production + Error)
+  delete-preview        Remove all Preview deployments
+  delete-errors         Remove deployments with status Error
+  help                  Show this help message
+
+Env overrides:
+  PROJECT_NAME="my-project"
+  TEAM_SCOPE="my-team"
+
+Examples:
+  PROJECT_NAME=pepcubes-lite ./vercel-cleanup.sh delete-preview
+  ./vercel-cleanup.sh --help
+
+🧭 Vercel Context:
+Vercel CLI 38.0.0
+> cevherd-gmailcom
+cloudruple:scripts cevherdogan$ ./vercel-cleanup.sh delete-all
+⚠️ Deleting ALL deployments (Preview + Prod + Error)
+Vercel CLI 38.0.0
+> Deployments for cevhers-projects/cevherdogan-com [191ms]
+
+  Age     Deployment                                                    Status      Environment     Duration     Username
+  21h     https://cevherdogan-9vlu7k6cr-cevhers-projects.vercel.app     ● Ready     Production      9s           cevherd-gmailcom
+  21h     https://cevherdogan-bcmwifebo-cevhers-projects.vercel.app     ● Ready     Production      8s           cevherd-gmailcom
+  21h     https://cevherdogan-m1jgb6szd-cevhers-projects.vercel.app     ● Ready     Production      8s           cevherd-gmailcom
+  21h     https://cevherdogan-n4k5z8vp7-cevhers-projects.vercel.app     ● Ready     Production      8s           cevherd-gmailcom
+  21h     https://cevherdogan-la1fzl9fv-cevhers-projects.vercel.app     ● Ready     Production      11s          cevherd-gmailcom
+  21h     https://cevherdogan-7i27lwu4h-cevhers-projects.vercel.app     ● Ready     Production      11s          cevherd-gmailcom
+  21h     https://cevherdogan-9bar38ici-cevhers-projects.vercel.app     ● Ready     Production      12s          cevherd-gmailcom
+  21h     https://cevherdogan-eqzvn20hz-cevhers-projects.vercel.app     ● Ready     Production      12s          cevherd-gmailcom
+  21h     https://cevherdogan-2de71ut37-cevhers-projects.vercel.app     ● Ready     Production      10s          cevherd-gmailcom
+  21h     https://cevherdogan-1q4w54ps5-cevhers-projects.vercel.app     ● Ready     Production      11s          cevherd-gmailcom
+  21h     https://cevherdogan-hfbehyyvo-cevhers-projects.vercel.app     ● Ready     Production      11s          cevherd-gmailcom
+  21h     https://cevherdogan-pgneawmyg-cevhers-projects.vercel.app     ● Ready     Production      22s          cevherd-gmailcom
+  21h     https://cevherdogan-hpuv3yb5f-cevhers-projects.vercel.app     ● Error     Preview         19s          cevherd-gmailcom
+  21h     https://cevherdogan-3cd7j8ouu-cevhers-projects.vercel.app     ● Error     Preview         19s          cevherd-gmailcom
+  21h     https://cevherdogan-lp1avvbhx-cevhers-projects.vercel.app     ● Error     Production      21s          cevherd-gmailcom
+  22h     https://cevherdogan-2ghqcd2gq-cevhers-projects.vercel.app     ● Ready     Production      9s           cevherd-gmailcom
+  22h     https://cevherdogan-luysbd7lx-cevhers-projects.vercel.app     ● Ready     Production      26s          cevherd-gmailcom
+
+🗑️ Removing cevherdogan-9vlu7k6cr-cevhers-projects.vercel.app
+Vercel CLI 38.0.0
+> Found 1 deployment for removal in cevhers-projects [604ms]
+> Success! Removed 1 deployment [698ms]
+- cevherdogan-9vlu7k6cr-cevhers-projects.vercel.app
+🗑️ Removing cevherdogan-bcmwifebo-cevhers-projects.vercel.app
+Vercel CLI 38.0.0
+> Found 1 deployment for removal in cevhers-projects [640ms]
+> Success! Removed 1 deployment [1s]
+- cevherdogan-bcmwifebo-cevhers-projects.vercel.app
+🗑️ Removing cevherdogan-m1jgb6szd-cevhers-projects.vercel.app
+Vercel CLI 38.0.0
+> Found 1 deployment for removal in cevhers-projects [708ms]
+> Success! Removed 1 deployment [684ms]
+- cevherdogan-m1jgb6szd-cevhers-projects.vercel.app
+🗑️ Removing cevherdogan-n4k5z8vp7-cevhers-projects.vercel.app
+Vercel CLI 38.0.0
+> Found 1 deployment for removal in cevhers-projects [1s]
+> Success! Removed 1 deployment [596ms]
+- cevherdogan-n4k5z8vp7-cevhers-projects.vercel.app
+🗑️ Removing cevherdogan-la1fzl9fv-cevhers-projects.vercel.app
+Vercel CLI 38.0.0
+> Found 1 deployment for removal in cevhers-projects [536ms]
+> Success! Removed 1 deployment [708ms]
+- cevherdogan-la1fzl9fv-cevhers-projects.vercel.app
+🗑️ Removing cevherdogan-7i27lwu4h-cevhers-projects.vercel.app
+Vercel CLI 38.0.0
+> Found 1 deployment for removal in cevhers-projects [530ms]
+> Success! Removed 1 deployment [464ms]
+- cevherdogan-7i27lwu4h-cevhers-projects.vercel.app
+🗑️ Removing cevherdogan-9bar38ici-cevhers-projects.vercel.app
+Vercel CLI 38.0.0
+> Found 1 deployment for removal in cevhers-projects [546ms]
+> Success! Removed 1 deployment [472ms]
+- cevherdogan-9bar38ici-cevhers-projects.vercel.app
+🗑️ Removing cevherdogan-eqzvn20hz-cevhers-projects.vercel.app
+Vercel CLI 38.0.0
+> Found 1 deployment for removal in cevhers-projects [534ms]
+> Success! Removed 1 deployment [447ms]
+- cevherdogan-eqzvn20hz-cevhers-projects.vercel.app
+🗑️ Removing cevherdogan-2de71ut37-cevhers-projects.vercel.app
+Vercel CLI 38.0.0
+> Found 1 deployment for removal in cevhers-projects [524ms]
+> Success! Removed 1 deployment [462ms]
+- cevherdogan-2de71ut37-cevhers-projects.vercel.app
+🗑️ Removing cevherdogan-1q4w54ps5-cevhers-projects.vercel.app
+Vercel CLI 38.0.0
+> Found 1 deployment for removal in cevhers-projects [526ms]
+> Success! Removed 1 deployment [452ms]
+- cevherdogan-1q4w54ps5-cevhers-projects.vercel.app
+🗑️ Removing cevherdogan-hfbehyyvo-cevhers-projects.vercel.app
+Vercel CLI 38.0.0
+> Found 1 deployment for removal in cevhers-projects [533ms]
+> Success! Removed 1 deployment [467ms]
+- cevherdogan-hfbehyyvo-cevhers-projects.vercel.app
+🗑️ Removing cevherdogan-pgneawmyg-cevhers-projects.vercel.app
+Vercel CLI 38.0.0
+> Found 1 deployment for removal in cevhers-projects [528ms]
+> Success! Removed 1 deployment [457ms]
+- cevherdogan-pgneawmyg-cevhers-projects.vercel.app
+🗑️ Removing cevherdogan-hpuv3yb5f-cevhers-projects.vercel.app
+Vercel CLI 38.0.0
+> Found 1 deployment for removal in cevhers-projects [515ms]
+> Success! Removed 1 deployment [791ms]
+- cevherdogan-hpuv3yb5f-cevhers-projects.vercel.app
+🗑️ Removing cevherdogan-3cd7j8ouu-cevhers-projects.vercel.app
+Vercel CLI 38.0.0
+> Found 1 deployment for removal in cevhers-projects [521ms]
+> Success! Removed 1 deployment [457ms]
+- cevherdogan-3cd7j8ouu-cevhers-projects.vercel.app
+🗑️ Removing cevherdogan-lp1avvbhx-cevhers-projects.vercel.app
+Vercel CLI 38.0.0
+> Found 1 deployment for removal in cevhers-projects [533ms]
+> Success! Removed 1 deployment [467ms]
+- cevherdogan-lp1avvbhx-cevhers-projects.vercel.app
+🗑️ Removing cevherdogan-2ghqcd2gq-cevhers-projects.vercel.app
+Vercel CLI 38.0.0
+> Found 1 deployment for removal in cevhers-projects [527ms]
+> Success! Removed 1 deployment [689ms]
+- cevherdogan-2ghqcd2gq-cevhers-projects.vercel.app
+🗑️ Removing cevherdogan-luysbd7lx-cevhers-projects.vercel.app
+Vercel CLI 38.0.0
+> Found 1 deployment for removal in cevhers-projects [550ms]
+> Success! Removed 1 deployment [465ms]
+- cevherdogan-luysbd7lx-cevhers-projects.vercel.app
+cloudruple:scripts cevherdogan$
+cloudruple:scripts cevherdogan$
+cloudruple:scripts cevherdogan$
+cloudruple:scripts cevherdogan$
+cloudruple:scripts cevherdogan$ ./vercel-cleanup.sh list
+📋 Listing deployments
+Vercel CLI 38.0.0
+> No deployments found.
+cloudruple:scripts cevherdogan$
+

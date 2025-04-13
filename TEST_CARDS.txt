@@ -1,0 +1,5 @@
+https://docs.stripe.com/testing#cards
+Visa	4242424242424242	Any 3 digits	Any future date
+Mastercard	5555555555554444	Any 3 digits	Any future date
+American Express	371449635398431	Any 4 digits	Any future date
+
