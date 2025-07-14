@@ -2,78 +2,117 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Subscription Tiers & Project Catalog</title>
+  <title>Showcase – Subscription Plans</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body { font-family: Arial, sans-serif; background: #f4f4f4; margin: 0; padding: 0; }
-    .container { width: 90%; max-width: 1200px; margin: auto; padding: 20px; }
-    h1, h2 { color: #333; }
-    .tier, .project, .unused { background: #fff; border-radius: 8px; margin: 15px 0; padding: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    .tier-header { background: #333; color: #fff; padding: 10px; border-radius: 8px 8px 0 0; }
-    ul { padding-left: 20px; }
-    .badge { background: #eee; display: inline-block; padding: 2px 6px; border-radius: 4px; margin-right: 5px; font-size: 0.8em; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen;
+      margin: 0;
+      padding: 40px;
+      background-color: #f9f9ff;
+      color: #222;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    .plans {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+    .card {
+      background: white;
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      width: 260px;
+      text-align: center;
+    }
+    .bronze { border: 2px solid #d49a6a; }
+    .silver { border: 2px solid #87b8ff; }
+    .premier { border: 2px solid #aaa; }
+
+    .price {
+      font-size: 1.2rem;
+      margin: 10px 0;
+    }
+    .highlight {
+      color: #555;
+      font-weight: bold;
+    }
+    .subscribe {
+      margin-top: 15px;
+      display: inline-block;
+      text-decoration: none;
+      padding: 10px 16px;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+    .bronze .subscribe {
+      background: #fff6ea;
+      color: #a25e2c;
+      border: 1px solid #d49a6a;
+    }
+    .silver .subscribe {
+      background: #eef4ff;
+      color: #2f6fd1;
+      border: 1px solid #87b8ff;
+    }
+    .premier .subscribe {
+      background: #eee;
+      color: #111;
+      border: 1px solid #bbb;
+    }
+    .note {
+      text-align: center;
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>📦 Subscription Tiers</h1>
-    <!-- Tiers -->
-    <div id="tiers"></div>
 
-    <h2>🛠️ Projects</h2>
-    <!-- Projects -->
-    <div id="projects"></div>
+  <h1>Charlotte Everley</h1>
+  <h2>Main Line Home & Lifestyle Curator</h2>
+  <p class="note">
+    Begin with 3 free prompts. Continue with a plan that fits your journey.
+  </p>
 
-    <h2>🧹 Tagged for Cleanup</h2>
-    <!-- Unused -->
-    <div id="unused"></div>
+  <div class="plans">
+    <div class="card bronze">
+      <h3>Bronze</h3>
+      <p>3 prompts/month</p>
+      <ul style="list-style: none; padding: 0;">
+        <li>• Seasonal tone alignment</li>
+        <li>• 3 updates/year</li>
+      </ul>
+      <p class="price">$29/mo or $79/quarter</p>
+      <a href="#" class="subscribe">Subscribe to Bronze</a>
+    </div>
+    <div class="card silver">
+      <h3>Silver <span class="highlight">(Most Popular)</span></h3>
+      <p>5 prompts/month</p>
+      <ul style="list-style: none; padding: 0;">
+        <li>• 6 annual updates</li>
+        <li>• Community resource access</li>
+        <li>• 7-day free trial</li>
+      </ul>
+      <p class="price">$49/mo or $139/quarter</p>
+      <a href="#" class="subscribe">Subscribe to Silver</a>
+    </div>
+    <div class="card premier">
+      <h3>Premier</h3>
+      <p>Unlimited requests</p>
+      <ul style="list-style: none; padding: 0;">
+        <li>• Unlimited edits</li>
+        <li>• Instant updates</li>
+        <li>• Calendar-based refreshes</li>
+      </ul>
+      <p class="price">$99/mo or $299/quarter</p>
+      <a href="#" class="subscribe">Subscribe to Premier</a>
+    </div>
   </div>
 
-  <script>
-    async function loadData() {
-      const tiers = await fetch('subscription_tiers.json').then(res => res.json());
-      const yamlData = await fetch('project_catalog.yaml').then(res => res.text());
-      const projects = jsyaml.load(yamlData);
-
-      const tiersContainer = document.getElementById('tiers');
-      tiers.forEach(tier => {
-        const el = document.createElement('div');
-        el.className = 'tier';
-        el.innerHTML = `
-          <div class="tier-header">${tier.name} — $${tier.price_usd}/mo</div>
-          <p>${tier.description}</p>
-          <ul>${tier.features.map(f => `<li>${f}</li>`).join('')}</ul>
-        `;
-        tiersContainer.appendChild(el);
-      });
-
-      const projectsContainer = document.getElementById('projects');
-      projects.projects.forEach(proj => {
-        const el = document.createElement('div');
-        el.className = 'project';
-        el.innerHTML = `
-          <strong>${proj.name}</strong> <span class="badge">${proj.status}</span><br>
-          <a href="${proj.url}" target="_blank">${proj.url}</a>
-          <p>${proj.notes}</p>
-        `;
-        projectsContainer.appendChild(el);
-      });
-
-      const unusedContainer = document.getElementById('unused');
-      projects.unused_or_cleanup.forEach(proj => {
-        const el = document.createElement('div');
-        el.className = 'unused';
-        el.innerHTML = `
-          <strong>${proj.name}</strong> <span class="badge">${proj.status}</span><br>
-          <a href="${proj.url}" target="_blank">${proj.url}</a>
-          <p>${proj.notes}</p>
-        `;
-        unusedContainer.appendChild(el);
-      });
-    }
-
-    loadData();
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
 </body>
 </html>
