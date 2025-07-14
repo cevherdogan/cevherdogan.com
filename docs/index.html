@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Subscription Tiers & Project Catalog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f4f4; margin: 0; padding: 0; }
+    .container { width: 90%; max-width: 1200px; margin: auto; padding: 20px; }
+    h1, h2 { color: #333; }
+    .tier, .project, .unused { background: #fff; border-radius: 8px; margin: 15px 0; padding: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .tier-header { background: #333; color: #fff; padding: 10px; border-radius: 8px 8px 0 0; }
+    ul { padding-left: 20px; }
+    .badge { background: #eee; display: inline-block; padding: 2px 6px; border-radius: 4px; margin-right: 5px; font-size: 0.8em; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📦 Subscription Tiers</h1>
+    <!-- Tiers -->
+    <div id="tiers"></div>
+
+    <h2>🛠️ Projects</h2>
+    <!-- Projects -->
+    <div id="projects"></div>
+
+    <h2>🧹 Tagged for Cleanup</h2>
+    <!-- Unused -->
+    <div id="unused"></div>
+  </div>
+
+  <script>
+    async function loadData() {
+      const tiers = await fetch('subscription_tiers.json').then(res => res.json());
+      const yamlData = await fetch('project_catalog.yaml').then(res => res.text());
+      const projects = jsyaml.load(yamlData);
+
+      const tiersContainer = document.getElementById('tiers');
+      tiers.forEach(tier => {
+        const el = document.createElement('div');
+        el.className = 'tier';
+        el.innerHTML = `
+          <div class="tier-header">${tier.name} — $${tier.price_usd}/mo</div>
+          <p>${tier.description}</p>
+          <ul>${tier.features.map(f => `<li>${f}</li>`).join('')}</ul>
+        `;
+        tiersContainer.appendChild(el);
+      });
+
+      const projectsContainer = document.getElementById('projects');
+      projects.projects.forEach(proj => {
+        const el = document.createElement('div');
+        el.className = 'project';
+        el.innerHTML = `
+          <strong>${proj.name}</strong> <span class="badge">${proj.status}</span><br>
+          <a href="${proj.url}" target="_blank">${proj.url}</a>
+          <p>${proj.notes}</p>
+        `;
+        projectsContainer.appendChild(el);
+      });
+
+      const unusedContainer = document.getElementById('unused');
+      projects.unused_or_cleanup.forEach(proj => {
+        const el = document.createElement('div');
+        el.className = 'unused';
+        el.innerHTML = `
+          <strong>${proj.name}</strong> <span class="badge">${proj.status}</span><br>
+          <a href="${proj.url}" target="_blank">${proj.url}</a>
+          <p>${proj.notes}</p>
+        `;
+        unusedContainer.appendChild(el);
+      });
+    }
+
+    loadData();
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+</body>
+</html>

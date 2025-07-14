@@ -1,0 +1,68 @@
+projects:
+  - name: Sahibinden Clone
+    url: https://sahibinden.previewhub-dev.com
+    status: "Upgrade to keep working on your project"
+    notes: "Multi-vendor marketplace clone with listing functionality"
+
+  - name: AloeVera Store
+    url: https://aloevera.previewhub-dev.com
+    status: "Upgrade to keep working on your project"
+    notes: "Health & wellness ecommerce storefront"
+
+  - name: Furniture Store (v1)
+    url: https://furniturestore.previewhub-dev.com
+    status: "Upgrade to keep working on your project"
+    notes: "Furniture e-commerce platform with catalog navigation"
+
+  - name: Furniture Store (v2)
+    url: https://furniture.previewhub-dev.com
+    status: "Upgrade to keep working on your project"
+    notes: "Alternative layout for furniture retail or gallery"
+
+  - name: Health Store
+    url: https://health.previewhub-dev.com
+    status: "Upgrade to keep working on your project"
+    notes: "Subscription-ready health products platform"
+
+  - name: Foundral Main Site
+    url: https://foundral.tech
+    status: "Upgrade to keep working on your project"
+    notes: "Corporate landing or innovation studio page"
+
+  - name: Foundral Developer Hub
+    url: https://h-dev.foundral.tech
+    status: "Upgrade to keep working on your project"
+    notes: "Internal or developer-dedicated project site"
+
+  - name: Real Estate Showcase – 387 Devonshire
+    url: https://387devonshire.foundral.tech
+    status: "Upgrade to keep working on your project"
+    notes: "Property showcase and listing demo site"
+
+unused_or_cleanup:
+  - name: Hostinger Horizons
+    url: https://hostinger.horizons
+    status: "Upgrade to keep working on your project"
+    notes: "Tagged for cleanup – generic landing or template starter"
+
+  - name: Aquamarine Worm
+    url: https://aquamarine-worm-249908.hostingersite.com
+    status: "Upgrade to keep working on your project"
+    notes: "Placeholder/demo – needs review or removal"
+
+metadata_notes:
+  usage: >
+    This YAML defines a product showcase for a subscription-based service linking templates to Stripe-backed pricing tiers.
+    Categories: Free, Silver, Gold, Premier.
+  backend:
+    hosting: "Linux-based (Hostinger / VPS)"
+    microservices: true
+    containers: [Docker, Kubernetes]
+    serverless: true
+    orchestrator: "AWS Step Functions"
+  ai_support:
+    type: "Multi-agentic AI backend support"
+    examples: ["Chatbot integration", "Predictive analytics", "Workflow automation"]
+  promotion:
+    model: "Partnership and affinity-based cross-marketing encouraged"
+    target_creators: ["Engineers", "Doctors", "Dentists", "Bloggers", "Finance Professionals"]
