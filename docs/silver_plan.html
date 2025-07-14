@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Silver Plan</title>
+  <title>Silver Plan – Freelancer’s Choice</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
@@ -11,6 +11,7 @@
       margin: 0;
       padding: 2rem;
       color: #333;
+      line-height: 1.5;
     }
     header {
       text-align: center;
@@ -19,25 +20,63 @@
     h1 {
       margin: 0;
       color: #2f6fd1;
+      font-size: 2rem;
+    }
+    p.sub {
+      font-size: 1.1rem;
+      color: #555;
     }
     .features {
       max-width: 600px;
-      margin: 1rem auto;
-      padding: 1rem;
+      margin: 2rem auto;
+      padding: 1.5rem;
       background: #fff;
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
+    .features h2 {
+      margin-top: 0;
+    }
     ul {
       padding-left: 1.5rem;
+    }
+    .price {
+      text-align: center;
+      font-size: 1.3rem;
+      margin: 1rem 0;
+      font-weight: bold;
+    }
+    .demos {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 600px;
+      margin: 2rem auto;
+    }
+    .demo-box {
+      background: #eef4ff;
+      border: 1px solid #87b8ff;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+    .demo-box h3 {
+      margin: 0 0 0.5rem 0;
+      color: #2f6fd1;
+    }
+    .demo-box a {
+      text-decoration: none;
+      color: #0050b3;
+      font-weight: bold;
     }
     footer {
       text-align: center;
       margin-top: 3rem;
+      font-size: 0.9rem;
     }
     footer a {
       color: #333;
       text-decoration: none;
+      font-weight: 500;
     }
   </style>
 </head>
@@ -45,17 +84,32 @@
 
   <header>
     <h1>Silver Plan – Freelancer’s Choice</h1>
-    <p>For early professionals and freelancers.</p>
+    <p class="sub">For early professionals and freelancers – $9.99/mo</p>
   </header>
 
   <section class="features">
     <h2>What's Included:</h2>
     <ul>
-      <li>3 Sites</li>
-<li>Custom Domain</li>
-<li>Priority Email Support</li>
+      <li>3 fully configured site templates</li>
+      <li>Custom domain setup support</li>
+      <li>Priority email support (response within 24h)</li>
     </ul>
-    <p><strong>Price: $9.99/mo</strong></p>
+    <p class="price">Price: $9.99/mo</p>
+  </section>
+
+  <section class="demos">
+    <div class="demo-box">
+      <h3>Portfolio Demo</h3>
+      <p><a href="silver-portfolio.html" target="_blank">View Silver Portfolio Landing Page →</a></p>
+    </div>
+    <div class="demo-box">
+      <h3>Startup Demo</h3>
+      <p><a href="silver-startup.html" target="_blank">View Silver Startup Launch Page →</a></p>
+    </div>
+    <div class="demo-box">
+      <h3>Services Demo</h3>
+      <p><a href="silver-services.html" target="_blank">View Silver Services Page →</a></p>
+    </div>
   </section>
 
   <footer>
@@ -64,3 +118,4 @@
 
 </body>
 </html>
+
