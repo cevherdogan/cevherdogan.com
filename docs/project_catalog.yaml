@@ -39,17 +39,6 @@ projects:
     status: "Upgrade to keep working on your project"
     notes: "Property showcase and listing demo site"
 
-unused_or_cleanup:
-  - name: Hostinger Horizons
-    url: https://hostinger.horizons
-    status: "Upgrade to keep working on your project"
-    notes: "Tagged for cleanup – generic landing or template starter"
-
-  - name: Aquamarine Worm
-    url: https://aquamarine-worm-249908.hostingersite.com
-    status: "Upgrade to keep working on your project"
-    notes: "Placeholder/demo – needs review or removal"
-
 metadata_notes:
   usage: >
     This YAML defines a product showcase for a subscription-based service linking templates to Stripe-backed pricing tiers.
