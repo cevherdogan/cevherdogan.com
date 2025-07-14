@@ -1,0 +1,79 @@
+[
+  {
+    "id": 1,
+    "name": "Hostinger Horizons",
+    "short_description": "Landing page / template showcase platform.",
+    "long_description": "Used to promote hosting plans, service tiers, or partner projects.",
+    "image_url": "/images/hostinger.png",
+    "stripe_product_id": "prod_hostinger_001",
+    "demo_url": "https://hostinger.horizons",
+    "suggested_tier": "Free",
+    "one_time_price_usd": 350
+  },
+  {
+    "id": 2,
+    "name": "Sahibinden Clone",
+    "short_description": "Multi-vendor classifieds platform.",
+    "long_description": "Marketplace clone with listing categories, filters, offers.",
+    "image_url": "/images/sahibinden.png",
+    "stripe_product_id": "prod_sahibinden_001",
+    "demo_url": "https://sahibinden.previewhub-dev.com",
+    "suggested_tier": "Gold",
+    "one_time_price_usd": 3000
+  },
+  {
+    "id": 3,
+    "name": "AloeVera Store",
+    "short_description": "Health & wellness product storefront.",
+    "long_description": "Ideal for DTC or influencer shops. Subscription-ready layout.",
+    "image_url": "/images/aloevera.png",
+    "stripe_product_id": "prod_alovera_001",
+    "demo_url": "https://aloevera.previewhub-dev.com",
+    "suggested_tier": "Silver",
+    "one_time_price_usd": 1000
+  },
+  {
+    "id": 4,
+    "name": "Furniture Store",
+    "short_description": "Catalog-based ecommerce for furniture.",
+    "long_description": "Rich filtering, image-based browsing, wishlist and cart features.",
+    "image_url": "/images/furniture.png",
+    "stripe_product_id": "prod_furnistore_001",
+    "demo_url": "https://furniturestore.previewhub-dev.com",
+    "suggested_tier": "Gold",
+    "one_time_price_usd": 2500
+  },
+  {
+    "id": 5,
+    "name": "Health Store",
+    "short_description": "Subscription-based health product ecommerce.",
+    "long_description": "Personalized health product bundles with smart onboarding.",
+    "image_url": "/images/health.png",
+    "stripe_product_id": "prod_health_001",
+    "demo_url": "https://health.previewhub-dev.com",
+    "suggested_tier": "Gold",
+    "one_time_price_usd": 1800
+  },
+  {
+    "id": 6,
+    "name": "Foundral.tech",
+    "short_description": "Corporate SaaS landing for engineering/consulting firms.",
+    "long_description": "Dynamic service catalog for founders and investors.",
+    "image_url": "/images/foundral.png",
+    "stripe_product_id": "prod_foundral_001",
+    "demo_url": "https://foundral.tech",
+    "suggested_tier": "Premier",
+    "one_time_price_usd": 2500
+  },
+  {
+    "id": 7,
+    "name": "387 Devonshire Showcase",
+    "short_description": "Real estate property presentation site.",
+    "long_description": "Includes 3D walkthrough, contact forms, and video integrations.",
+    "image_url": "/images/devonshire.png",
+    "stripe_product_id": "prod_387devon_001",
+    "demo_url": "https://387devonshire.foundral.tech",
+    "suggested_tier": "Premier",
+    "one_time_price_usd": 3000
+  }
+]

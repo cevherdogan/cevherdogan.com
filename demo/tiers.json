@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Free",
+    "description": "Basic access for hobbyists and individual creators.",
+    "price_usd": 0.0,
+    "stripe_price_id": "price_free_001",
+    "features": [
+      "1 Site",
+      "No Custom Domain",
+      "Community Support"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Silver",
+    "description": "For early professionals and freelancers.",
+    "price_usd": 9.99,
+    "stripe_price_id": "price_silver_002",
+    "features": [
+      "3 Sites",
+      "Custom Domain",
+      "Priority Email Support"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Gold",
+    "description": "For businesses needing branded presence.",
+    "price_usd": 29.99,
+    "stripe_price_id": "price_gold_003",
+    "features": [
+      "10 Sites",
+      "White-label",
+      "Analytics"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Premier",
+    "description": "For elite partners and high-demand clients.",
+    "price_usd": 99.99,
+    "stripe_price_id": "price_premier_004",
+    "features": [
+      "Unlimited Sites",
+      "Priority SLA",
+      "Dedicated Onboarding"
+    ]
+  }
+]
